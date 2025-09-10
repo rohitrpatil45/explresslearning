@@ -2,7 +2,8 @@
   "dependencies": {
     "cookie-parser": "^1.4.7",
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mongoose": "^8.18.1"
   },
   "name": "express5hours",
   "version": "1.0.0",

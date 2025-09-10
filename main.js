@@ -1,13 +1,14 @@
-import express from "express";
-import userRoutes from "./routes/UserRoute.js";
+// main.js
+import User from "./models/User.js";
 
-const app = express();
-const port = 3000;
+try {
+  // CREATE
+  const newUser = User.create({ name: "Rohit", age: 22, email: "rohit@example.com" });
+  console.log("User Created:", newUser);
 
-app.use(express.json());
-
-app.use("/users", userRoutes);
-
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
-});
+  // READ
+  const users = User.findAll();
+  console.log("All Users:", users);
+} catch (err) {
+  console.error("Error:", err.message);
+}
